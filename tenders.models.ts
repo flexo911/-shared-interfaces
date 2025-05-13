@@ -100,7 +100,7 @@ export interface ITender{
     startDate: string,
     endDate: string,
   },
-  complaints: Array<IComplaint>,
+  complaints?: Array<IComplaint>,
   bids?: IBids[]
   awardPeriod?: {
     startDate: string,
