@@ -9,14 +9,6 @@ export interface TendersListResponse {
   totalPages: number
 }
 
-export interface BuyerListResponse {
-  buyers: Array<IProcuringEntity>,
-  limit: number
-  page: number
-  total: number
-  totalPages: number
-}
-
 export interface BuyerSingleResponse {
   procuringEntity: IProcuringEntity
   statistics: IBuyerStatistics

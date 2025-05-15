@@ -154,6 +154,12 @@ export interface IArguments {
   }>
 }
 
+export interface ITenderContract {
+  id: string
+  awardID: string
+  contractID: string
+}
+
 export interface BaseTenderLotsInterface {
   title: string,
   description: string,
@@ -249,8 +255,8 @@ export interface IBaseTenderContracts {
   },
   documents?: IDocuments[]
   dateSigned?: string // added by request
-  items: ItemsInterface[],
-  suppliers: IProcuringEntity[] // Organisation,
+  items?: ItemsInterface[],
+  suppliers?: IProcuringEntity[] // Organisation,
   date: string
 }
 
