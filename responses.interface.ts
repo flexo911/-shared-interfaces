@@ -65,3 +65,12 @@ export interface IBuyerResponse {
   total: number
   totalPages: number
 }
+
+
+export interface ISuppliersResponse {
+  suppliers: Array<IProcuringEntity>,
+  limit: number
+  page: number
+  total: number
+  totalPages: number
+}
