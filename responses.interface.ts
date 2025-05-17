@@ -45,7 +45,6 @@ export interface IBuyerStatistics {
 }
 
 export interface IBuyerTendersResponse {
-  currentPage: number
   statistics: {
     activeCount: number
     averageAmount: number
@@ -54,7 +53,9 @@ export interface IBuyerTendersResponse {
     totalAmount: number
   }
   tenders: Array<ITender>
-  totalItems: number
+  limit: number
+  page: number
+  total: number
   totalPages: number
 }
 
@@ -95,7 +96,6 @@ export interface ISupplierResponse {
 
 
 export interface ISupplierContractResponse {
-  currentPage: number
   statistics: {
     activeCount: number
     averageAmount: number
@@ -104,7 +104,9 @@ export interface ISupplierContractResponse {
     totalAmount: number
   }
   contracts: Array<IContract>
-  totalItems: number
+  limit: number
+  page: number
+  total: number
   totalPages: number
 }
 
