@@ -120,7 +120,7 @@ export interface ITender{
 export interface IComplaint {
   status: string
   documents: IDocuments[],
-  description: string
+  description?: string
   author: IProcuringEntity
   title: string
   value: ValueInterface,
