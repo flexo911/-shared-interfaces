@@ -1,6 +1,6 @@
 import {ITender} from './tenders.models'
 import {IProcuringEntity} from './IProcuringEntity'
-import {IContract} from '@shared/IContract.interface'
+import {IContract} from './IContract.interface'
 
 export interface TendersListResponse {
   tenders: Array<ITender>,

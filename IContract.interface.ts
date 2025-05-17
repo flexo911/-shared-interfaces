@@ -9,6 +9,7 @@ export interface IContract{
   title?: string
   contractTemplateName?: string
   description?: string
+  date?: string
   period?: {
     startDate: string
     endDate: string
@@ -26,7 +27,7 @@ export interface IContract{
   procuringEntity?: IProcuringEntity
   changes?: ContractChangesInterface[]
   documents?: IDocuments[]
-  bid_owner: string
+  bid_owner?: string
   amountPaid?: {
     amount: number
     currency: string
@@ -67,3 +68,5 @@ export interface PaginatedContractResponse {
     completedCount: number
   };
 }
+
+
