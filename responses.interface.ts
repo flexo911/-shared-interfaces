@@ -112,22 +112,26 @@ export interface ISupplierContractResponse {
 
 export interface SupplierData {
   supplier: IProcuringEntity;
-  statistics: {
-    totalContracts: number;
-    totalAmount: number;
+  statistics: ISupplierStatistics
+}
+
+export interface ISupplierStatistics {
+    totalContracts: number,
+    totalAmount: number,
     statusBreakdown: {
       [key: string]: {
-        count: number;
-        amount: number;
-      };
-    };
-    monthlyStatistics: Array<{
-      month: string;
-      count: number;
-      amount: number;
-      active: number;
-      completed: number;
-      terminated: number;
-    }>;
-  };
+        count: number
+        amount: number
+      }
+    },
+    monthlyStatistics: [
+        {
+            month: string,
+            count: number
+            "amount": number
+            "active": number
+            "completed": number
+            "terminated": number
+        }
+    ]
 }
