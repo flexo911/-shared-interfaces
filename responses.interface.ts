@@ -99,3 +99,46 @@ export interface ISupplierContractResponse {
   totalItems: number
   totalPages: number
 }
+
+export interface SupplierData {
+  supplier: {
+    id: string;
+    name: string;
+    scale: string;
+    identifier: {
+      scheme: string;
+      id: string;
+      legalName?: string;
+      uri?: string;
+    };
+    address?: {
+      countryName?: string;
+      postalCode?: string;
+      region?: string;
+      streetAddress?: string;
+      locality?: string;
+    };
+    contactPoint?: {
+      telephone: string;
+      email: string;
+    };
+  };
+  statistics: {
+    totalContracts: number;
+    totalAmount: number;
+    statusBreakdown: {
+      [key: string]: {
+        count: number;
+        amount: number;
+      };
+    };
+    monthlyStatistics: Array<{
+      month: string;
+      count: number;
+      amount: number;
+      active: number;
+      completed: number;
+      terminated: number;
+    }>;
+  };
+}
