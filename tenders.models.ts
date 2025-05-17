@@ -82,6 +82,7 @@ export interface ITender{
     startDate?: string,
     endDate: string
   },
+
   enquiryPeriod?: {
     startDate: string
     endDate: string
@@ -113,6 +114,7 @@ export interface ITender{
   mode?: string
   user?: string
   contractTemplateName?: string
+
 }
 
 export interface IComplaint {
@@ -162,14 +164,14 @@ export interface ITenderContract {
 
 export interface BaseTenderLotsInterface {
   title: string,
-  description: string,
+  description?: string,
   status: string,
   id: string,
   date: string
   value: ValueInterface,
   minimalStep: ValueInterface,
   guarantee: ValueInterface,
-  auctionPeriod: {
+  auctionPeriod?: {
     startDate: string,
     endDate: string
   }
@@ -196,9 +198,24 @@ export interface IBids {
         id: string
         title?: string
       },
-      value: string
+      value?: string | boolean | number
+      values?: Array<string | boolean | number>
       id: string
+      classification?: IClassification
+      unit?: {
+        code: string
+        name: string
+      }
     }[]
+  items?: Array<{
+          "id": string,
+          "description": string
+          "unit": {
+            "name": string
+            "code": string
+          },
+          "quantity": number
+        }>
   tenderers?: IProcuringEntity[]
   status: string
   id: string
@@ -209,6 +226,7 @@ export interface IBids {
       value: ValueInterface,
       relatedLot: string
       date: string
+      status?: string,
     }[]
   value?: {
     amount: number
@@ -216,6 +234,7 @@ export interface IBids {
     valueAddedTaxIncluded: boolean
   },
   documents?: IDocuments[]
+  submissionDate?: string
 }
 
 export interface ITenderAward {
@@ -231,6 +250,10 @@ export interface ITenderAward {
   eligible?: boolean
   complaintPeriod?: {
     startDate: string
+    endDate: string
+  },
+  period?:{
+     startDate?: string,
     endDate: string
   }
 }
@@ -269,3 +292,4 @@ export interface BaseTenderCancellation {
   status: string
   documents?: IDocuments[]
 }
+

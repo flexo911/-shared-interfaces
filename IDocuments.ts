@@ -4,6 +4,8 @@ export interface IDocuments {
   title: string,
   format: string,
   url: string
+  title_ru?: string
+  title_en?: string
   datePublished ?: string,
   dateModified ?: string
   documentOf?: string

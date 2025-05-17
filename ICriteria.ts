@@ -31,6 +31,7 @@ export interface ICriteriaRequirements {
   expectedValues?: string[] | []
   expectedMinItems?: number,
   expectedMaxItems?: number,
+  dataSchema?: string,
   minValue?: number
   relatedDocument?: {
     id: string

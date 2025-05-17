@@ -16,24 +16,24 @@ export interface BuyerSingleResponse {
 }
 
 export interface IBuyerStatistics {
-    tendersCount: number
-    totalAmount: number
-    successfulTenders: number
-    activeTenders: number
-    cancelledTenders: number
-    tendersByMonth: Array<{
-      date: string
-      amount: number
-      status: string
-    }>
-    monthlyStatistics: Array<{
-      month: string
-      count: number
-      amount: number
-      successful: number
-      active: number
-      cancelled: number
-    }>
+  tendersCount: number
+  totalAmount: number
+  successfulTenders: number
+  activeTenders: number
+  cancelledTenders: number
+  tendersByMonth: Array<{
+    date: string
+    amount: number
+    status: string
+  }>
+  monthlyStatistics: Array<{
+    month: string
+    count: number
+    amount: number
+    successful: number
+    active: number
+    cancelled: number
+  }>
 }
 
 export interface IBuyerTendersResponse {

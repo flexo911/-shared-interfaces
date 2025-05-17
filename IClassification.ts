@@ -1,5 +1,5 @@
 export interface IClassification {
-  description: string
+  description?: string
   id: string
   scheme: string
   _id?: number
