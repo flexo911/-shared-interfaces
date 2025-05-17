@@ -101,28 +101,7 @@ export interface ISupplierContractResponse {
 }
 
 export interface SupplierData {
-  supplier: {
-    id: string;
-    name: string;
-    scale: string;
-    identifier: {
-      scheme: string;
-      id: string;
-      legalName?: string;
-      uri?: string;
-    };
-    address?: {
-      countryName?: string;
-      postalCode?: string;
-      region?: string;
-      streetAddress?: string;
-      locality?: string;
-    };
-    contactPoint?: {
-      telephone: string;
-      email: string;
-    };
-  };
+  supplier: IProcuringEntity;
   statistics: {
     totalContracts: number;
     totalAmount: number;
