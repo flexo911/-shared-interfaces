@@ -11,7 +11,7 @@ export interface TendersListResponse {
 }
 
 export interface ContractListResponse {
-  tenders: Array<IContract>,
+  contracts: Array<IContract>,
   limit: number
   page: number
   total: number
