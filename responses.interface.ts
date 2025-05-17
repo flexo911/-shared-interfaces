@@ -1,5 +1,6 @@
 import {ITender} from './tenders.models'
 import {IProcuringEntity} from './IProcuringEntity'
+import {IContract} from '@shared/IContract.interface'
 
 export interface TendersListResponse {
   tenders: Array<ITender>,
@@ -72,5 +73,29 @@ export interface ISuppliersResponse {
   limit: number
   page: number
   total: number
+  totalPages: number
+}
+
+
+export interface ISupplierResponse {
+  supplier: Array<IProcuringEntity>,
+  limit: number
+  page: number
+  total: number
+  totalPages: number
+}
+
+
+export interface ISupplierContractResponse {
+  currentPage: number
+  statistics: {
+    activeCount: number
+    averageAmount: number
+    cancelledCount: number
+    successfulCount: number
+    totalAmount: number
+  }
+  contracts: Array<IContract>
+  totalItems: number
   totalPages: number
 }
