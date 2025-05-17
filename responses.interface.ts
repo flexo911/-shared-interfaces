@@ -10,6 +10,14 @@ export interface TendersListResponse {
   totalPages: number
 }
 
+export interface ContractListResponse {
+  tenders: Array<IContract>,
+  limit: number
+  page: number
+  total: number
+  totalPages: number
+}
+
 export interface BuyerSingleResponse {
   procuringEntity: IProcuringEntity
   statistics: IBuyerStatistics
