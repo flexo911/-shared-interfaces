@@ -53,3 +53,17 @@ export interface ContractChangesInterface{
   contractNumber?: string
   dateSigned: string
 }
+
+export interface PaginatedContractResponse {
+  contracts: IContract[]
+  totalItems: number
+  currentPage: number
+  totalPages: number
+  statistics: {
+    totalAmount: number
+    averageAmount: number
+    terminatedCount: number
+    activeCount: number
+    completedCount: number
+  };
+}
