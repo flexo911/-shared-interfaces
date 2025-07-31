@@ -293,3 +293,8 @@ export interface BaseTenderCancellation {
   documents?: IDocuments[]
 }
 
+export interface BaseTender {
+  data: ITender
+  config: {[key: string]: boolean | string | number }
+}
+
