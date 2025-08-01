@@ -56,7 +56,7 @@ export interface ContractChangesInterface{
 }
 
 export interface PaginatedContractResponse {
-  contracts: IContract[]
+  contracts: IBaseContract[]
   totalItems: number
   currentPage: number
   totalPages: number
@@ -67,6 +67,11 @@ export interface PaginatedContractResponse {
     activeCount: number
     completedCount: number
   };
+}
+
+export interface IBaseContract {
+  data: IContract
+  config: {[key: string]: boolean | string | number }
 }
 
 
