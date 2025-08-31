@@ -52,7 +52,7 @@ export interface IBuyerTendersResponse {
     successfulCount: number
     totalAmount: number
   }
-  tenders: Array<ITender>
+  tenders: Array<BaseTender>
   limit: number
   page: number
   total: number
