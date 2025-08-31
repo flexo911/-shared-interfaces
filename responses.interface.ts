@@ -3,7 +3,7 @@ import {IProcuringEntity} from './IProcuringEntity'
 import {BaseContract, IContract} from './IContract.interface'
 
 export interface TendersListResponse {
-  tenders: Array<ITender>,
+  tenders: Array<BaseTender>,
   limit: number
   page: number
   total: number
