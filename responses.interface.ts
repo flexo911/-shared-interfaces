@@ -1,6 +1,6 @@
 import {BaseTender, ITender} from './tenders.models'
 import {IProcuringEntity} from './IProcuringEntity'
-import {IBaseContract, IContract} from './IContract.interface'
+import {BaseContract, IContract} from './IContract.interface'
 
 export interface TendersListResponse {
   tenders: Array<ITender>,
@@ -11,7 +11,7 @@ export interface TendersListResponse {
 }
 
 export interface ContractListResponse {
-  contracts: Array<IBaseContract>,
+  contracts: Array<BaseContract>,
   limit: number
   page: number
   total: number
