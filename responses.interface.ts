@@ -135,3 +135,21 @@ export interface ISupplierStatistics {
         }
     ]
 }
+
+export interface IMapResponse {
+  region: string,
+  totalAmount: number
+  countTenders: number
+  coordinates: Array< number >
+  categories: Array<{
+    "category": string
+        "code": string
+        "totalAmount": number
+        "countTenders": number
+  }>
+}
+
+export interface IMapDBResult extends IMapResponse{
+  _id: string
+}
+
