@@ -1,6 +1,6 @@
-import {BaseTender, ITender} from './tenders.models'
-import {IProcuringEntity} from './IProcuringEntity'
-import {BaseContract, IContract} from './IContract.interface'
+import { BaseTender } from './tenders.models'
+import { IProcuringEntity } from './IProcuringEntity'
+import { BaseContract } from './IContract.interface'
 
 export interface TendersListResponse {
   tenders: Array<BaseTender>,
@@ -103,7 +103,7 @@ export interface ISupplierContractResponse {
     successfulCount: number
     totalAmount: number
   }
-  contracts: Array<IContract>
+  contracts: Array<BaseContract>
   limit: number
   page: number
   total: number
@@ -140,6 +140,7 @@ export interface IMapResponse {
   region: string,
   totalAmount: number
   countTenders: number
+  lowestDate: string
   coordinates: Array< number >
   categories: Array<{
     "category": string
