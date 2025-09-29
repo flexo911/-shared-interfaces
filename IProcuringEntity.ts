@@ -61,51 +61,7 @@ export interface IPQShortlistedFirms extends IProcuringEntity{
   status?: string
 }
 
-export interface CzoProcuringEntity {
-  id?: string,
-  active?: boolean
-  name?: string
-  name_en?: string
-  name_uk?: string
-  kind?: string
-  address: {
-    countryName: string
-    locality: string
-    postalCode: string
-    region: string
-    streetAddress: string
-  },
-  contactPoint?: {
-    email: string
-    faxNumber?: string
-    telephone: string
-    url: string
-    name_en?: string
-    name_uk: string
-  },
-  identifier: {
-    id: string
-    scheme: string
-    legalName?: string
-    legalName_en?: string
-    legalName_uk?: string
-  },
-}
-
-export interface CzoShortProcuringEntity {
-  name: string
+export interface IBuyersProcuringEntity extends IProcuringEntity{
   id: string
-  kind: string
-  address: {
-    countryName: string
-    locality: string
-    postalCode: string
-    region: string
-    streetAddress: string
-  },
-  identifier: {
-    id: string
-    scheme: string
-    legalName: string
-  },
+  tendersCount: number
 }
