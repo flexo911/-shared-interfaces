@@ -59,6 +59,25 @@ export interface IBuyerTendersResponse {
   totalPages: number
 }
 
+export interface IBuyersHonesty {
+
+  customerId: string
+  totalTenders: number
+  reportingTenders: number
+  tenderTypesDistribution: {
+    open: number
+    reporting: number
+    negotiation: number
+  },
+  totalValue: number
+  totalContractValue: number
+  avgParticipants: number
+  singleWinnerRate: number
+  cancelledTenders: number
+  complaintsCount: number
+  localityRate: number
+  featuresUpdated: string
+}
 
 export interface IListResponse {
   tenders: Array<BaseTender>,
