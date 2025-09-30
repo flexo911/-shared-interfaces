@@ -67,7 +67,6 @@ export interface ITender{
   awardCriteria?: string // lowestCost,
   status: string,
   plans?: { id: string} []
-  isBidIsset?: boolean
   agreement?: {
     id: string
   },

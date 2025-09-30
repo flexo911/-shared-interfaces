@@ -60,23 +60,18 @@ export interface IBuyerTendersResponse {
 }
 
 export interface IBuyersHonesty {
-
   customerId: string
   totalTenders: number
   reportingTenders: number
-  tenderTypesDistribution: {
-    open: number
-    reporting: number
-    negotiation: number
-  },
+  tenderTypesDistribution: {[key: string]: number }
   totalValue: number
   totalContractValue: number
-  avgParticipants: number
-  singleWinnerRate: number
+  avgBidsPerTender: number
+  "bidWinnerFairnessScore": number
   cancelledTenders: number
   complaintsCount: number
   localityRate: number
-  featuresUpdated: string
+  honestlyRate: {[key: string]: number }
 }
 
 export interface IListResponse {
