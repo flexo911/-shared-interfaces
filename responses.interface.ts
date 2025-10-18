@@ -71,7 +71,6 @@ export interface IBuyersHonestyRequest {
   bidWinnerFairnessScore: number
   cancelledTenders: number
   complaintsCount: number
-  localityRate: number
   lowestDate: string,
 }
 
@@ -86,9 +85,10 @@ export interface IBuyersHonesty  extends IBuyersHonestyRequest {
   bidWinnerFairnessScore: number
   cancelledTenders: number
   complaintsCount: number
-  localityRate: number
   honestlyRate: IBuyersHonestlyRate
 }
+
+
 
 export interface IBuyersHonestlyRate {
         "honestyScore":number,
