@@ -59,7 +59,8 @@ export interface IBuyerTendersResponse {
   totalPages: number
 }
 
-export interface IBuyersHonesty {
+
+export interface IBuyersHonestyRequest {
   customerId: string
   totalTenders: number
   reportingTenders: number
@@ -67,11 +68,39 @@ export interface IBuyersHonesty {
   totalValue: number
   totalContractValue: number
   avgBidsPerTender: number
-  "bidWinnerFairnessScore": number
+  bidWinnerFairnessScore: number
   cancelledTenders: number
   complaintsCount: number
   localityRate: number
-  honestlyRate: {[key: string]: number }
+  lowestDate: string,
+}
+
+export interface IBuyersHonesty  extends IBuyersHonestyRequest {
+  customerId: string
+  totalTenders: number
+  reportingTenders: number
+  tenderTypesDistribution: {[key: string]: number }
+  totalValue: number
+  totalContractValue: number
+  avgBidsPerTender: number
+  bidWinnerFairnessScore: number
+  cancelledTenders: number
+  complaintsCount: number
+  localityRate: number
+  honestlyRate: IBuyersHonestlyRate
+}
+
+export interface IBuyersHonestlyRate {
+        "honestyScore":number,
+        "mse": number,
+        "status": string,
+        "details": {
+            "base_score": number,
+            "fairness_bonus": number,
+            "bids_penalty": number,
+            "avg_bids_per_tender": number,
+            "bid_winner_fairness": number
+        }
 }
 
 export interface IListResponse {
