@@ -102,6 +102,7 @@ export interface ITender{
   },
   complaints?: Array<IComplaint>,
   bids?: IBids[]
+  questions?: Array<IAnswer>
   awardPeriod?: {
     startDate: string,
     endDate: string,
@@ -113,14 +114,13 @@ export interface ITender{
   mode?: string
   user?: string
   contractTemplateName?: string
-
 }
 
 export interface IComplaint {
   status: string
   documents: IDocuments[],
   description?: string
-  author: IProcuringEntity
+
   title: string
   value: ValueInterface,
   dateSubmitted: string
@@ -129,6 +129,16 @@ export interface IComplaint {
   objections: Array<IObjection>,
   type: string
   id: string
+}
+export interface IAnswer {
+  author: {hash: string }
+  id: string
+  title: string
+  description: string
+  answer?: string
+  questionOf?: string
+  dateAnswered?: string
+  date?: string
 }
 export interface IObjection{
     requestedRemedies:Array<{
@@ -174,6 +184,7 @@ export interface BaseTenderLotsInterface {
     startDate: string,
     endDate: string
   }
+  auctionUrl?: string
 }
 
 export interface BaseTenderMilestonesInterface{
@@ -205,6 +216,18 @@ export interface IBids {
         code: string
         name: string
       }
+      evidences?: Array<
+        {
+          title?: string
+          description?: string
+          type: string
+          relatedDocument?: {
+            id: string
+            title: string
+          },
+          id?: string
+        }
+      >
     }[]
   items?: Array<{
           "id": string,
@@ -214,6 +237,7 @@ export interface IBids {
             "code": string
           },
           "quantity": number
+    relatedLot?: string
         }>
   tenderers?: IProcuringEntity[]
   status: string
@@ -226,6 +250,8 @@ export interface IBids {
       relatedLot: string
       date: string
       status?: string,
+    subcontractingDetails?: string
+    initialValue?: ValueInterface
     }[]
   value?: {
     amount: number
@@ -233,6 +259,7 @@ export interface IBids {
     valueAddedTaxIncluded: boolean
   },
   documents?: IDocuments[]
+  eligibilityDocuments?: IDocuments[]
   submissionDate?: string
 }
 
@@ -246,6 +273,8 @@ export interface ITenderAward {
   lotID?: string
   documents?: IDocuments[],
   qualified?: boolean
+  title?: string
+  description?: string
   eligible?: boolean
   complaintPeriod?: {
     startDate: string

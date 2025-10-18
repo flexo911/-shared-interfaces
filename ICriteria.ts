@@ -66,7 +66,7 @@ export interface ICriteriaLegislation {
 
 export interface ICriteriaRequirementsEligibleEvidences {
   title?: string
-  description: string
+  description?: string
   type: string
   relatedDocument?: {
     id: string
