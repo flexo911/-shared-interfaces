@@ -313,7 +313,7 @@ export interface IBaseTenderContracts {
 
 export interface BaseTenderCancellation {
   reasonType: string
-  reason: string
+  reason?: string
   id: string
   date: string
   cancellationOf: string
