@@ -1,7 +1,7 @@
 export interface IProcuringEntity {
   kind?: string
   scale?: string
-  name: string
+  name?: string
   name_uk?: string
   name_en?: string
   name_ru?: string
